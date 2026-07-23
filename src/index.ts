@@ -1,3 +1,5 @@
+import { cars } from "./array";
+import { user } from "./object";
 import { now } from "./utill/test";
 
 function greet(name: string, msg: string): string {
@@ -38,16 +40,19 @@ type DatabaseConfig = {
   password: string;
 };
 
+type Features = {
+  registration: boolean;
+  darkMode: boolean;
+};
+
 type AppConfig = {
   appName: string;
   version: string;
   debug: boolean;
   port: number;
   database: DatabaseConfig;
-  features: {
-    registration: boolean;
-    darkMode: boolean;
-  };
+  features: Features;
+  languages: string[];
 };
 
 const config: AppConfig = {
@@ -65,5 +70,13 @@ const config: AppConfig = {
     registration: true,
     darkMode: false,
   },
+  languages: ["en", "es", "fr"],
 };
 console.log(config);
+
+//////
+
+console.log(user);
+
+///
+console.log(cars);

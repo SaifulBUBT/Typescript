@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const array_1 = require("./array");
+const object_1 = require("./object");
 const test_1 = require("./utill/test");
 function greet(name, msg) {
     console.log(`Time is : ${(0, test_1.now)()}`);
@@ -32,5 +34,10 @@ const config = {
         registration: true,
         darkMode: false,
     },
+    languages: ["en", "es", "fr"],
 };
 console.log(config);
+//////
+console.log(object_1.user);
+///
+console.log(array_1.cars);
