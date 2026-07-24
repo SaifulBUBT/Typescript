@@ -80,3 +80,50 @@ console.log(user);
 
 ///
 console.log(cars);
+
+// tuple
+
+type Point = readonly [number, number];
+
+const dhakaCoordinates: Point = [23.8103, 90.4125];
+console.log("Dhaka Coordinates:", dhakaCoordinates);
+
+type Player = [string, number, string];
+
+const players: Player[] = [
+  ["Saiful", 30, "Bangladesh"],
+  ["Alex", 25, "USA"],
+  ["John", 28, "UK"],
+];
+
+console.log(players);
+
+///
+type PersonTuple = [string, number];
+const person1: PersonTuple = ["Saiful", 30];
+
+// Tuple distructuring
+const [name, age] = person1;
+console.log(`Name: ${name}, Age: ${age}`);
+
+// Tuple with optional elements
+type OptionalTuple = [string, number?];
+const optionalPerson: OptionalTuple = ["Saiful"];
+console.log(
+  `Optional Person: Name: ${optionalPerson[0]}, Age: ${optionalPerson[1] ?? "N/A"}`,
+);
+
+// Tuple with rest elements
+type RestTuple = [string, ...number[]];
+const restPerson: RestTuple = ["Saiful", 30, 31, 32];
+console.log(
+  `Rest Person: Name: ${restPerson[0]}, Ages: ${restPerson.slice(1).join(", ")}`,
+);
+
+// Function returning a tuple
+function getPersonInfo(): [string, number] {
+  return ["Saiful", 30];
+}
+
+const [personName, personAge] = getPersonInfo(); //distructuring
+console.log(`Person Info: Name: ${personName}, Age: ${personAge}`);
