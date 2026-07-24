@@ -63,3 +63,50 @@ function getPersonInfo() {
 }
 const [personName, personAge] = getPersonInfo(); //distructuring
 console.log(`Person Info: Name: ${personName}, Age: ${personAge}`);
+//  Enum example
+var TColors;
+(function (TColors) {
+    TColors["Red"] = "red";
+    TColors["Green"] = "green";
+    TColors["Blue"] = "blue";
+})(TColors || (TColors = {}));
+const t1 = {
+    size: 38,
+    color: TColors.Red,
+};
+const t2 = {
+    size: 40,
+    color: TColors.Blue,
+};
+const t3 = {
+    size: 42,
+    color: TColors.Green,
+};
+const t4 = {
+    size: 36,
+    color: TColors.Red,
+};
+console.log(t1, t2, t3, t4);
+// Enum another example
+var Status;
+(function (Status) {
+    Status["draft"] = "draft";
+    Status["private"] = "private";
+    Status["public"] = "public";
+})(Status || (Status = {}));
+const article1 = {
+    id: 1,
+    title: "My First Article",
+    status: Status.draft,
+};
+const article2 = {
+    id: 2,
+    title: "My Second Article",
+    status: Status.private,
+};
+const article3 = {
+    id: 3,
+    title: "My Third Article",
+    status: Status.public,
+};
+console.log(article1, article2, article3);
