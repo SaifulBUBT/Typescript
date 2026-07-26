@@ -196,3 +196,74 @@ const article3: Article = {
 };
 
 console.log(article1, article2, article3);
+
+////union type example
+type UserId = string | number;
+
+const userId1: UserId = "abc123";
+const userId2: UserId = 456;
+
+//
+type Role = "admin" | "editor" | "viewer";
+const userRole1: Role = "admin";
+const userRole2: Role = "editor";
+const userRole3: Role = "viewer";
+
+//
+type SuccessResponse = {
+  status: "success";
+  data: string[];
+};
+
+type ErrorResponse = {
+  status: "error";
+  message: string;
+  code: number;
+};
+
+type ApiResponse = SuccessResponse | ErrorResponse;
+
+function handleApiResponse(response: ApiResponse) {
+  if (response.status === "success") {
+    console.log("Data:", response.data);
+  } else {
+    console.log("Error:", response.message, "Code:", response.code);
+  }
+}
+
+handleApiResponse({ status: "success", data: ["item1", "item2"] });
+handleApiResponse({ status: "error", message: "Not Found", code: 404 });
+
+//
+type Rentangle = {
+  width: number;
+  height: number;
+};
+
+type Square = {
+  size: number;
+};
+
+type Circle = {
+  radius: number;
+};
+
+type Shape = Rentangle | Square | Circle;
+
+function calculteArea(shape: Shape): number {
+  if ("radius" in shape) {
+    return Math.PI * shape.radius * shape.radius;
+  } else if ("size" in shape) {
+    return shape.size * shape.size;
+  } else {
+    return shape.width * shape.height;
+  }
+}
+
+const recArea = calculteArea({ width: 10, height: 20 });
+const squareArea = calculteArea({ size: 15 });
+const circleArea = calculteArea({ radius: 7 });
+
+console.log("Rectangle Area:", recArea);
+console.log("Square Area:", squareArea);
+console.log("Circle Area:", circleArea);
