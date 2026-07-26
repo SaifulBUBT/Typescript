@@ -288,3 +288,33 @@ const employee: Employee = {
   department: "IT",
 };
 console.log(employee);
+
+// function type example
+type userType = {
+  name: string;
+  age: number;
+  email: string;
+  isPremium: boolean;
+  printInfo: () => void;
+  add: (a: number, b: number) => number;
+};
+
+const user1: userType = {
+  name: "Saiful",
+  age: 30,
+  email: "s.saifulbubt@gmail.com",
+  isPremium: true,
+  printInfo: function () {
+    console.log(
+      `Name: ${this.name}, Age: ${this.age}, Email: ${this.email}, Premium: ${this.isPremium}`,
+    );
+  },
+
+  add(a: number, b: number) {
+    return a + b;
+  },
+};
+
+user1.printInfo();
+
+console.log(user1.add(20, 5));

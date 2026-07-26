@@ -150,3 +150,17 @@ const employee = {
     department: "IT",
 };
 console.log(employee);
+const user1 = {
+    name: "Saiful",
+    age: 30,
+    email: "s.saifulbubt@gmail.com",
+    isPremium: true,
+    printInfo: function () {
+        console.log(`Name: ${this.name}, Age: ${this.age}, Email: ${this.email}, Premium: ${this.isPremium}`);
+    },
+    add(a, b) {
+        return a + b;
+    },
+};
+user1.printInfo();
+console.log(user1.add(20, 5));
