@@ -142,3 +142,11 @@ const circleArea = calculteArea({ radius: 7 });
 console.log("Rectangle Area:", recArea);
 console.log("Square Area:", squareArea);
 console.log("Circle Area:", circleArea);
+// type PersonEmployee = Person1 & Employee;
+const employee = {
+    name: "Saiful",
+    age: 30,
+    employeeId: 12345,
+    department: "IT",
+};
+console.log(employee);

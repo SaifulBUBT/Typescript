@@ -267,3 +267,24 @@ const circleArea = calculteArea({ radius: 7 });
 console.log("Rectangle Area:", recArea);
 console.log("Square Area:", squareArea);
 console.log("Circle Area:", circleArea);
+
+// Intersection type example //
+type Person1 = {
+  name: string;
+  age: number;
+};
+
+type Employee = Person1 & {
+  employeeId: number;
+  department: string;
+};
+
+// type PersonEmployee = Person1 & Employee;
+
+const employee: Employee = {
+  name: "Saiful",
+  age: 30,
+  employeeId: 12345,
+  department: "IT",
+};
+console.log(employee);
