@@ -2,9 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const array_1 = require("./array");
 const object_1 = require("./object");
-const test_1 = require("./utill/test");
+const test_1 = require("./OOP/test");
+const test_2 = require("./utill/test");
 function greet(name, msg) {
-    console.log(`Time is : ${(0, test_1.now)()}`);
+    console.log(`Time is : ${(0, test_2.now)()}`);
     return `${msg} ${name}!`;
 }
 console.log(greet("How are you?", "Saiful Islam"));
@@ -164,3 +165,7 @@ const user1 = {
 };
 user1.printInfo();
 console.log(user1.add(20, 5));
+//
+const cart = new test_1.Cart();
+cart.addItems(10, 200, 4);
+console.log("Cart total: ", cart.getTotal());

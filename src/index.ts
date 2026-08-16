@@ -1,5 +1,6 @@
 import { cars } from "./array";
 import { user } from "./object";
+import { Cart } from "./OOP/test";
 import { now } from "./utill/test";
 
 function greet(name: string, msg: string): string {
@@ -318,3 +319,8 @@ const user1: userType = {
 user1.printInfo();
 
 console.log(user1.add(20, 5));
+
+//
+const cart = new Cart();
+cart.addItems(10, 200, 4);
+console.log("Cart total: ", cart.getTotal());
