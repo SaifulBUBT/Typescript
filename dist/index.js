@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const array_1 = require("./array");
 const object_1 = require("./object");
+const Encapsulation_1 = require("./OOP/Encapsulation");
 const Order_1 = require("./OOP/Order");
 const test_1 = require("./OOP/test");
 const test_2 = require("./utill/test");
@@ -176,3 +177,8 @@ console.log(order);
 //
 const u = new Order_1.User("Saiful", "s.saiful@gmail.com", 50);
 console.log(u.greet("How are you?"));
+//
+const acc = new Encapsulation_1.BankAccount();
+acc.deposit(5000);
+const balance = acc.getBalance();
+console.log("Account balance: ", balance);

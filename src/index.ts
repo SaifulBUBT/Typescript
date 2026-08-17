@@ -1,5 +1,6 @@
 import { cars } from "./array";
 import { user } from "./object";
+import { BankAccount } from "./OOP/Encapsulation";
 import { Order, User } from "./OOP/Order";
 import { Cart } from "./OOP/test";
 import { now } from "./utill/test";
@@ -333,3 +334,11 @@ console.log(order);
 //
 const u = new User("Saiful", "s.saiful@gmail.com", 50);
 console.log(u.greet("How are you?"));
+
+//
+const acc = new BankAccount();
+
+acc.deposit(5000);
+
+const balance = acc.getBalance();
+console.log("Account balance: ", balance);
