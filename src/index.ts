@@ -1,5 +1,6 @@
 import { cars } from "./array";
 import { user } from "./object";
+import { Order, User } from "./OOP/Order";
 import { Cart } from "./OOP/test";
 import { now } from "./utill/test";
 
@@ -324,3 +325,11 @@ console.log(user1.add(20, 5));
 const cart = new Cart();
 cart.addItems(10, 200, 4);
 console.log("Cart total: ", cart.getTotal());
+
+//
+const order = new Order("1234", 5000);
+console.log(order);
+
+//
+const u = new User("Saiful", "s.saiful@gmail.com", 50);
+console.log(u.greet("How are you?"));

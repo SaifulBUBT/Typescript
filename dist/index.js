@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const array_1 = require("./array");
 const object_1 = require("./object");
+const Order_1 = require("./OOP/Order");
 const test_1 = require("./OOP/test");
 const test_2 = require("./utill/test");
 function greet(name, msg) {
@@ -169,3 +170,9 @@ console.log(user1.add(20, 5));
 const cart = new test_1.Cart();
 cart.addItems(10, 200, 4);
 console.log("Cart total: ", cart.getTotal());
+//
+const order = new Order_1.Order("1234", 5000);
+console.log(order);
+//
+const u = new Order_1.User("Saiful", "s.saiful@gmail.com", 50);
+console.log(u.greet("How are you?"));
